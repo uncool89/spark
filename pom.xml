@@ -58,6 +58,9 @@
                 <configuration>
                     <sameBranchName>true</sameBranchName>
                     <pushRemote>true</pushRemote>
+                    <gitFlowConfig>
+                        <releaseBranchPrefix>release</releaseBranchPrefix>
+                    </gitFlowConfig>
                 </configuration>
             </plugin>
         </plugins>
