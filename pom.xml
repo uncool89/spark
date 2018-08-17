@@ -4,7 +4,7 @@
 
     <groupId>org.spark.test</groupId>
     <artifactId>spark-test</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
     <properties>
         <git.user />
@@ -52,16 +52,15 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>external.atlassian.jgitflow</groupId>
-                <artifactId>jgitflow-maven-plugin</artifactId>
-                <version>1.0-m5.1</version>
+                <groupId>com.amashchenko.maven.plugin</groupId>
+                <artifactId>gitflow-maven-plugin</artifactId>
+                <version>1.10.0</version>
                 <configuration>
-                    <pushReleases>true</pushReleases>
-                    <allowUntracked>true</allowUntracked>
-                    <username>${git.user}</username>
-                    <password>${git.password}</password>
-                    <noDeploy>true</noDeploy>
-                    <!--<enableSshAgent>true</enableSshAgent>-->
+                    <sameBranchName>true</sameBranchName>
+                    <pushRemote>true</pushRemote>
+                    <gitFlowConfig>
+                        <releaseBranchPrefix>release</releaseBranchPrefix>
+                    </gitFlowConfig>
                 </configuration>
             </plugin>
         </plugins>
