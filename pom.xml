@@ -4,10 +4,10 @@
 
     <groupId>org.spark.test</groupId>
     <artifactId>spark-test</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
     <properties>
-        <git.user />
+        <git.user/>
         <git.password />
     </properties>
     <build>
@@ -60,6 +60,8 @@
                     <pushRemote>true</pushRemote>
                     <gitFlowConfig>
                         <releaseBranchPrefix>release</releaseBranchPrefix>
+                        <username>${git.user}</username>
+                        <password>${git.password}</password>
                     </gitFlowConfig>
                 </configuration>
             </plugin>
